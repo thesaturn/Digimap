@@ -14,20 +14,11 @@ namespace Digimap.Models
     
     public partial class PtoIntere
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PtoIntere()
-        {
-            this.Salas = new HashSet<Sala>();
-        }
-    
         public string id_Interes { get; set; }
         public string nom_Punto { get; set; }
         public string instruccion_uno { get; set; }
         public string instruccion_dos { get; set; }
         public string instruccion_tres { get; set; }
         public string path { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sala> Salas { get; set; }
     }
 }

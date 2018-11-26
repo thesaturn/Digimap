@@ -209,6 +209,7 @@
     <Content Include="Models\ModelDigimap.edmx.diagram">
       <DependentUpon>ModelDigimap.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -236,6 +237,15 @@
     <Content Include="Views\Map\Index.cshtml" />
     <Content Include="Views\Map\Lista.cshtml" />
     <Content Include="Views\Map\Interes.cshtml" />
+    <Content Include="Views\Map\PisoMenosUno.cshtml" />
+    <Content Include="Views\Map\PisoUno.cshtml" />
+    <Content Include="Views\Map\PisoDos.cshtml" />
+    <Content Include="Views\Map\PisoTres.cshtml" />
+    <Content Include="Views\Map\PisoCuatro.cshtml" />
+    <Content Include="Views\Map\PisoCinco.cshtml" />
+    <Content Include="Views\Map\PisoSeis.cshtml" />
+    <Content Include="Views\Map\PisoSiete.cshtml" />
+    <Content Include="Views\Map\PisoOcho.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

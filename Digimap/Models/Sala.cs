@@ -21,7 +21,5 @@ namespace Digimap.Models
         public string instruccion_tres { get; set; }
         public string path { get; set; }
         public string id_Interes { get; set; }
-    
-        public virtual PtoIntere PtoIntere { get; set; }
     }
 }

@@ -38,26 +38,10 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
-        <Association Name="FK_Salas_PtoInteres">
-          <End Role="PtoInteres" Type="Self.PtoInteres" Multiplicity="0..1" />
-          <End Role="Salas" Type="Self.Salas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PtoInteres">
-              <PropertyRef Name="id_Interes" />
-            </Principal>
-            <Dependent Role="Salas">
-              <PropertyRef Name="id_Interes" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="DigimapModelStoreContainer">
           <EntitySet Name="PtoInteres" EntityType="Self.PtoInteres" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Salas" EntityType="Self.Salas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Salas_PtoInteres" Association="Self.FK_Salas_PtoInteres">
-            <End Role="PtoInteres" EntitySet="PtoInteres" />
-            <End Role="Salas" EntitySet="Salas" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -73,7 +57,6 @@
           <Property Name="instruccion_dos" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="instruccion_tres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="path" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Salas" Relationship="DigimapModel.FK_Salas_PtoInteres" FromRole="PtoIntere" ToRole="Sala" />
         </EntityType>
         <EntityType Name="Sala">
           <Key>
@@ -86,7 +69,6 @@
           <Property Name="instruccion_tres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="path" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="id_Interes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="PtoIntere" Relationship="DigimapModel.FK_Salas_PtoInteres" FromRole="Sala" ToRole="PtoIntere" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -102,23 +84,7 @@
           <EntitySet Name="PtoInteres" EntityType="Self.PtoIntere" />
           <EntitySet Name="Salas" EntityType="Self.Sala" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <AssociationSet Name="FK_Salas_PtoInteres" Association="DigimapModel.FK_Salas_PtoInteres">
-            <End Role="PtoIntere" EntitySet="PtoInteres" />
-            <End Role="Sala" EntitySet="Salas" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Salas_PtoInteres">
-          <End Type="DigimapModel.PtoIntere" Role="PtoIntere" Multiplicity="0..1" />
-          <End Type="DigimapModel.Sala" Role="Sala" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PtoIntere">
-              <PropertyRef Name="id_Interes" />
-            </Principal>
-            <Dependent Role="Sala">
-              <PropertyRef Name="id_Interes" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

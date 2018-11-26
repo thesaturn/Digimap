@@ -38,5 +38,51 @@ namespace Digimap.Controllers
             return View(lista);
         }
 
+        public ActionResult PisoMenosUno()
+        {
+            return View();
+        }
+
+        public ActionResult PisoUno()
+        {
+            return View();
+        }
+
+        public ActionResult PisoDos()
+        {
+            return View();
+        }
+
+        public ActionResult PisoTres()
+        {
+            return View();
+        }
+
+        public ActionResult PisoCuatro()
+        {
+            return View();
+        }
+
+        public ActionResult PisoCinco()
+        {
+            return View();
+        }
+
+        public ActionResult PisoSeis()
+        {
+            return View();
+        }
+
+        public ActionResult PisoSiete()
+        {
+            return View();
+        }
+
+        public ActionResult PisoOcho()
+        {
+            return View();
+        }
+
+
     }
 }
