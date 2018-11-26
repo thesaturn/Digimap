@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Digimap";
+}
+
+@using (Html.BeginForm("Lista",  "Map", FormMethod.Get, new { @class = "form-horizontal" }))
+
+{
+<body>
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <img src="../Content/DigimapLogo.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </header>
+
+    <form>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-5">
+                <input class="form-control" name="Busqueda" type="text-muted" placeholder="Buscar una sala o punto de interés" aria-label="Buscar">
+                <br />
+                <button class="btn btn-success" type="submit">Buscar</button>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </form>
+
+</body>
+
+}

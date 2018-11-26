@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Digimap.Models.PtoIntere>
+
+@{
+    ViewBag.Title = "Instrucciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br/>
+
+@foreach (var item in Model) {
+    <h2>Instrucciones - @Html.DisplayFor(modelItem => item.nom_Punto)</h2>
+
+}
+
+<table class="table">
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                <img src="~/Content/Planos/@Html.DisplayFor(modelItem => item.path)" width="1000" height="600" class="img-fluid"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nom_Punto)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<h2>¿Cómo llegar?</h2>
+
+@foreach (var item in Model)
+{
+    <ul class="list-group">
+        <li class="list-group-item">1. @Html.DisplayFor(modelItem => item.instruccion_uno)</li>
+        <li class="list-group-item">2. @Html.DisplayFor(modelItem => item.instruccion_dos)</li>
+        <li class="list-group-item">3. @Html.DisplayFor(modelItem => item.instruccion_tres)</li>
+    </ul>
+}

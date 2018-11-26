@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6046f08fef7f4381b680e5b5ef1503d6" Name="Diagram1">
+        <EntityTypeShape EntityType="DigimapModel.PtoIntere" Width="1.875" PointX="2.875" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigimapModel.Sala" Width="2.125" PointX="7.375" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigimapModel.sysdiagram" Width="1.5" PointX="3.625" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="DigimapModel.FK_Salas_PtoInteres" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
